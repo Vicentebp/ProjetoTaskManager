@@ -1,0 +1,11 @@
+.homeBtn {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: auto auto;
+  background-color: var(--purple);
+  border-radius: 24px;
+  position: absolute;
+  right: 27px;
+  bottom: 34px;
+}
