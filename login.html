@@ -11,12 +11,32 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/fontStyle.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="JsAndTs/login.js"></script>
     <title>Task Manager</title>
   </head>
   <body>
-    <div class="bodyWrapper">
-      <span class="fontFamily titleTxt screen2">Welcome <br />back!</span>
+    <div class="bodyWrapper fontFamily titleTxt">
+      <div style="margin: 167px auto 0px auto">
+        <span id="screen2">Welcome <br />back!</span>
+        <img src="img/homeScreen/DiaryScreen2.png" id="diaryScreen2" />
+        <svg id="c1"></svg>
+        <svg id="c2"></svg>
+        <form name="login" id="login" class="subWrapper" style="margin: 104px auto 0px auto">
+          <input type="email" name="email" placeholder="Email" required class="defaultBox fontFamily" id="email" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$"
+            class="defaultBox fontFamily"
+            id="password"
+          />
+          <button type="submit" class="defaultBox fontFamily">Log In</button>
+        </form>
+        <span class="subTxt">Dont have an account?<a href="register.html"> Create account.</a></span>
+      </div>
     </div>
   </body>
 </html>

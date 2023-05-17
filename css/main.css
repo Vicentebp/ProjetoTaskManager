@@ -8,35 +8,58 @@ body {
   width: 360px;
   height: 640px;
   margin: auto auto;
-  background: #f6f2ff;
+  background: var(--white);
   border-radius: 20px;
 
   box-sizing: content-box;
 }
-#diaryScreen1 {
-  position: relative;
-  width: 320px;
-  height: 320px;
-  left: 31px;
-  top: 87px;
+.subWrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
 }
 .fontFamily {
   font-family: "Poppins";
   text-align: center;
   color: var(--purple);
 }
-.titleTxt {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 30px;
-  margin: 80px auto;
+
+/* caixas */
+.defaultBox {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  background: var(--blue);
+  color: var(--purple);
+  border-radius: 30px;
+  border: none;
 }
-.titleTxt .screen2 {
-  line-height: 36px;
-  margin: 167px auto 0px auto;
+.subWrapper .defaultBox {
+  height: 36px;
+  width: 261px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
 }
+.subWrapper input {
+  padding-left: 20px;
+  outline: none;
+  box-sizing: border-box;
+}
+.subWrapper .defaultBox:nth-child(3) {
+  background: var(--purple);
+  justify-content: center;
+  color: white;
+  margin-top: 8px;
+}
+
 :root {
   --white: #f6f2ff;
   --blue: #d1d0f9;
   --purple: #6368d9;
+}
+
+::placeholder {
+  color: inherit;
 }
