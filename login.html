@@ -12,7 +12,11 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/login.css" />
-    <script src="JsAndTs/login.js"></script>
+
+    <script src="src/onReady.js"></script>
+    <script src="src/services/isLoged.js"></script>
+    <script src="src/services/getUser.js"></script>
+    <script src="src/login.js"></script>
     <title>Task Manager</title>
   </head>
   <body>
@@ -24,15 +28,7 @@
         <svg id="c2"></svg>
         <form name="login" id="login" class="subWrapper" style="margin: 104px auto 0px auto">
           <input type="email" name="email" placeholder="Email" required class="defaultBox fontFamily" id="email" />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$"
-            class="defaultBox fontFamily"
-            id="password"
-          />
+          <input type="password" name="password" placeholder="Password" required class="defaultBox fontFamily" id="password" />
           <button type="submit" class="defaultBox fontFamily">Log In</button>
         </form>
         <span class="subTxt">Dont have an account?<a href="register.html"> Create account.</a></span>

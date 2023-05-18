@@ -47,7 +47,7 @@ body {
   outline: none;
   box-sizing: border-box;
 }
-.subWrapper .defaultBox:nth-child(3) {
+.subWrapper .defaultBox:last-child {
   background: var(--purple);
   justify-content: center;
   color: white;
