@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/createTask.css" />
+
+    <script src="src/services/createTask.js"></script>
+    <script src="src/onReady.js"></script>
+    <script src="src/isUnlogged.js"></script>
+    <script src="src/createTask.js"></script>
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div class="bodyWrapper fontFamily">
+      <div class="subWrapper txtTitle" id="taskFormWrap">
+        <div class="subWrapper" style="flex-direction: row; margin-bottom: 33px">
+          <img src="img/createTaskScren/arrowLeft.svg" style="margin-right: 16px" />
+          <span>Create task</span>
+        </div>
+        <form name="createTask" id="createTask" class="subWrapper">
+          <label>Title <input type="text" name="taskName" class="defaultBox taskForm" autocomplete="off" required id="taskName" /></label>
+          <label>Date <input type="date" name="taskDate" class="defaultBox taskForm" required id="taskDate" /></label>
+          <div class="subWrapper" style="flex-direction: row; justify-content: space-between" required id="timeBox">
+            <label>Start Time<input type="time" name="taskStart" class="defaultBox taskForm" required id="taskStart" /></label>
+            <label>End Time<input type="time" name="taskFinish" class="defaultBox taskForm" required id="taskFinish" /></label>
+          </div>
+          <label
+            >Category
+            <div class="subWrapper" id="taskType">
+              <input class="catBtn" type="radio" name="taskType" value="college" id="college" />
+              <label for="college" class="defaultBox taskLabel">College Stuff</label>
+              <input class="catBtn" type="radio" name="taskType" value="work" id="work" />
+              <label for="work" class="defaultBox taskLabel"><span>Work</span></label>
+              <input class="catBtn" type="radio" name="taskType" value="social" id="social" />
+              <label for="social" class="defaultBox taskLabel">Social Life</label>
+              <input class="catBtn" type="radio" name="taskType" value="study" id="study" />
+              <label for="study" class="defaultBox taskLabel"><span>Study</span></label>
+              <input class="catBtn" type="radio" name="taskType" value="personal" id="personal" />
+              <label for="personal" class="defaultBox taskLabel">Personal project</label>
+              <input class="catBtn" type="radio" name="taskType" value="home" id="home" />
+              <label for="home" class="defaultBox taskLabel"><span>Home</span></label>
+            </div>
+          </label>
+          <label>Description<textarea type="text" name="taskDesc" class="defaultBox taskForm" id="taskDesc"></textarea></label>
+          <div class="subWrapper" style="flex-direction: row">
+            <div class="defaultBox" id="trash"><img src="img/createTaskScren/trashBin.svg" /></div>
+            <button type="submit" class="defaultBox fontFamily" id="saveTask"><span>Save task</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

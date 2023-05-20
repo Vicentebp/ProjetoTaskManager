@@ -7,21 +7,32 @@ body {
   flex-direction: column;
   width: 360px;
   height: 640px;
-  margin: auto auto;
+  margin: 0px;
   background: var(--white);
   border-radius: 20px;
 
   box-sizing: content-box;
 }
-.subWrapper {
+.formWrapperL {
   display: flex;
   flex-direction: column;
   width: fit-content;
   height: fit-content;
 }
+.subWrapper {
+  display: flex;
+  flex-direction: column;
+}
 .fontFamily {
   font-family: "Poppins";
   text-align: center;
+  color: var(--purple);
+}
+
+.txtTitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
   color: var(--purple);
 }
 
@@ -35,19 +46,19 @@ body {
   border-radius: 30px;
   border: none;
 }
-.subWrapper .defaultBox {
+.formWrapperL .defaultBox {
   height: 36px;
   width: 261px;
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 16px;
 }
-.subWrapper input {
+input {
   padding-left: 20px;
   outline: none;
   box-sizing: border-box;
 }
-.subWrapper .defaultBox:last-child {
+.formWrapperL .defaultBox:last-child {
   background: var(--purple);
   justify-content: center;
   color: white;

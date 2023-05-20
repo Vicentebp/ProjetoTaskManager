@@ -6,7 +6,7 @@ ready(() => {
     if (!user) alert("Email not registred");
     else if (user.password !== e.target.password.value) alert("Wrong password");
     else {
-      localStorage.setItem("auth", "true");
+      localStorage.setItem("auth", user.email);
       document.location.href = "home.html";
     }
   });

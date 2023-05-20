@@ -1,0 +1,74 @@
+.taskForm {
+  background-color: transparent;
+  border-radius: 30px;
+  height: 36px;
+  width: 100%;
+  border: 1px solid var(--purple);
+  margin: 0px;
+}
+#timeBox .taskForm {
+  width: 135px;
+}
+#taskDesc {
+  height: 107px;
+}
+#taskFormWrap {
+  height: inherit;
+  margin: 56px 38px 66px 38px;
+}
+label {
+  text-align: start;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+#saveTask {
+  background-color: var(--purple);
+  color: var(--white);
+  height: 30px;
+  width: 157px;
+  text-align: center;
+  padding: 0px;
+}
+#saveTask span {
+  margin: 0 auto;
+}
+#trash {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  width: 39px;
+  margin: 0px 5px 0px 45px;
+  background: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+#taskType {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.catBtn {
+  display: none;
+}
+.taskLabel {
+  min-width: 60px;
+  padding: 2px 9px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+.taskLabel span {
+  margin: 0px auto;
+}
+.catBtn:checked + .taskLabel {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+#taskDesc {
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+}

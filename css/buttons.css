@@ -5,7 +5,7 @@
   padding: auto auto;
   background-color: var(--purple);
   border-radius: 24px;
-  position: absolute;
-  right: 27px;
-  bottom: 34px;
+  position: relative;
+  left: 293px;
+  top: 34px;
 }
