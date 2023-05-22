@@ -7,13 +7,14 @@ ready(() => {
   const percent = ((completedTaks.length * 100) / taskNum).toFixed(1);
   document.getElementById("tasksCompleted").innerText = `${percent}% completed`;
   document.getElementById("tasksToDo").innerText = `You have ${toDo.length} more tasks to do!`;
+
   if (i == 0) {
     i = 1;
     var elem = document.getElementById("progressBar");
     var width = 1;
     var id = setInterval(frame, 10);
     function frame() {
-      if (width >= 100) {
+      if (width >= percent) {
         clearInterval(id);
         i = 0;
       } else {

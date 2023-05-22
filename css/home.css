@@ -39,6 +39,7 @@
 }
 .categoryBox {
   flex-direction: row;
+  justify-content: space-between;
   width: 137px;
   height: 68px;
   gap: 19px;
@@ -48,9 +49,16 @@
   padding: 12px 21px;
   box-sizing: border-box;
 }
+
 .fix {
   margin-left: 7px;
 }
 .defaultBox h1 {
   margin: 0;
+}
+
+#diaryWhite {
+  position: absolute;
+  left: 217px;
+  top: 202.5px;
 }
