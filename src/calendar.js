@@ -19,5 +19,4 @@ ready(() => {
     document.getElementById("carousel").append(label);
     date.setDate(date.getDate() + 1);
   }
-  getTaskStates();
 });
