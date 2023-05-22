@@ -12,12 +12,6 @@
   display: none;
 }
 
-.carousel::-webkit-scrollbar-track {
-}
-
-.carousel::-webkit-scrollbar-thumb {
-}
-
 #taskList {
   height: 360px;
   gap: 8px;
@@ -63,6 +57,34 @@
   gap: 25px;
 }
 
+.calendarBox {
+  flex-direction: column;
+  justify-content: left;
+  width: 286px;
+  height: 77px;
+  background: var(--blue);
+  padding: 12px 18px 18px 18px;
+  box-sizing: border-box;
+  color: var(--purple);
+  border-radius: 15px;
+  align-items: start;
+}
+.calendarBox .typeTxt {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.calendarBox .nameTxt {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
+.calendarBox .timeTxt {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
 .statusBtn:checked + .statusCard {
   background-color: var(--purple);
   color: var(--white);
