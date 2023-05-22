@@ -10,6 +10,7 @@ ready(() => {
     };
     try {
       createUser(newUser);
+      document.location.href = "login.html";
     } catch (error) {
       alert(error);
     }

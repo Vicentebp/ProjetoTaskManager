@@ -6,17 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/buttons.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/home.css" />
+
+    <script src="src/services/getUser.js"></script>
+    <script src="src/onReady.js"></script>
+    <script src="src/isUnlogged.js"></script>
+    <script src="src/taskNumber.js"></script>
+
     <title>Task Manager</title>
   </head>
   <body>
-    <div class="bodyWrapper fontFamily titleTxt"></div>
+    <div class="bodyWrapper fontFamily" id="homeWrap">
+      <header class="subWrapper txtTitle" style="flex-direction: row; gap: 11px">
+        <img class="picture" />
+        <span id="userName">
+          <span class="subTxtHome">Hello, <br /></span>
+          <script src="src/getUserName.js"></script>
+        </span>
+      </header>
+      <main class="subWrapper">
+        <span class="subTxtHome subTitleHome">Let's check out your today's task</span>
+        <div class="defaultBox" id="percentBox">
+          <span id="taskPercent"><script src="src/taskPercent.js"></script> </span>
+        </div>
+        <span class="subTxtHome subTitleHome">Task categories</span>
+        <div class="subWrapper" id="categoryWrap">
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">College <br />stuff</h1>
+              <span class="categorySubTxt" id="collegeTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _university_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Study</h1>
+              <span class="categorySubTxt" id="studyTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _diary_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Social <br />life</h1>
+              <span class="categorySubTxt" id="socialTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _Chat_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Work</h1>
+              <span class="categorySubTxt" id="workTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _work alt bag_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Personal <br />Project</h1>
+              <span class="categorySubTxt" id="personalTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _folder file project_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Home</h1>
+              <span class="categorySubTxt" id="homeTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _home outline_.svg" />
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
   </body>
 </html>

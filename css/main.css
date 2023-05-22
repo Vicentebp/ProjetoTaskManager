@@ -64,7 +64,16 @@ input {
   color: white;
   margin-top: 8px;
 }
-
+.titleTxt {
+  font-weight: 800;
+  font-size: 24px;
+}
+.subTxt {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #9c98a2;
+}
 :root {
   --white: #f6f2ff;
   --blue: #d1d0f9;
