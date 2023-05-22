@@ -2,16 +2,16 @@ const getTaskStates = () => {
   const userTasks = getUserTasks();
   const newState = userTasks.map((item) => {
     const now = new Date();
+    let state = "To do";
     if (now > new Date(item.finalDate)) {
-      item.state = "Completed";
-      return item.state;
+      state = "Completed";
+    } else if (now > new Date(item.startDate)) {
+      state = "In progress";
     }
-    if (now > new Date(item.startDate)) {
-      item.state = "In progress";
-      return item.state;
-    }
-    item.state = "To do";
-    return item.state;
+    return {
+      ...item,
+      state,
+    };
   });
   return newState;
 };

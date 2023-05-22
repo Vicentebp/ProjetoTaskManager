@@ -44,7 +44,4 @@ ready(() => {
   document.getElementById("studyTasks").innerText = `${taskNum.study} tasks`;
   document.getElementById("personalTasks").innerText = `${taskNum.personal} tasks`;
   document.getElementById("homeTasks").innerText = `${taskNum.home} tasks`;
-
-  // if (localStorage.getItem("userTasks") == null) localStorage.setItem("userTasks", "[]");
-  // localStorage.setItem("userTasks", JSON.stringify(userTasks));
 });

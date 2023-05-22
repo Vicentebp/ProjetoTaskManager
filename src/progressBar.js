@@ -1,10 +1,11 @@
 ready(() => {
   var i = 0;
   const taskArray = getTaskStates();
-  const taskNum = taskArray.length;
-  const completedTaks = taskArray.filter((item) => item === "Completed");
-  const toDo = taskArray.filter((item) => item === "To do");
+  const taskNum = taskArray.length || 1;
+  const completedTaks = taskArray.filter((item) => item.state === "Completed");
+  const toDo = taskArray.filter((item) => item.state === "To do");
   const percent = ((completedTaks.length * 100) / taskNum).toFixed(1);
+  console.log({ taskNum, percent });
   document.getElementById("tasksCompleted").innerText = `${percent}% completed`;
   document.getElementById("tasksToDo").innerText = `You have ${toDo.length} more tasks to do!`;
 

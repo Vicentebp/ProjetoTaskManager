@@ -18,6 +18,15 @@
 .carousel::-webkit-scrollbar-thumb {
 }
 
+#taskList {
+  height: 360px;
+  gap: 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#taskList::-webkit-scrollbar {
+  display: none;
+}
 .card {
   background-color: var(--blue);
   color: var(--white);
@@ -29,6 +38,32 @@
   border-radius: 10px;
 }
 .carouselBtn:checked + .card {
+  background-color: var(--purple);
+  color: var(--white);
+}
+#statusWrapper {
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.statusCard {
+  height: 22px;
+  width: max-content;
+  padding: 0px 9px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  box-sizing: border-box;
+  color: var(--purple);
+}
+#toDo {
+  min-width: 80px;
+}
+#calendarWrapper {
+  gap: 25px;
+}
+
+.statusBtn:checked + .statusCard {
   background-color: var(--purple);
   color: var(--white);
 }

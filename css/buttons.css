@@ -24,9 +24,11 @@
 footer {
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 35px;
   gap: 36px;
-  margin-bottom: 100px;
-  width: 100%;
+  width: auto;
   box-sizing: content-box;
 }
 footer input[type="image"] {
