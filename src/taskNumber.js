@@ -1,7 +1,5 @@
 ready(() => {
-  const user = getUser(localStorage.getItem("auth"));
-  const taskArray = JSON.parse(localStorage.getItem("tasks"));
-  const userTasks = taskArray.filter((item) => item.userId === user.email);
+  const userTasks = getUserTasks();
   const taskNum = {
     college: 0,
     work: 0,

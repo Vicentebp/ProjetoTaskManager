@@ -1,0 +1,34 @@
+.carousel {
+  width: calc(100% + 38px);
+  height: 53px;
+  margin-top: 21px;
+  gap: 10px;
+  display: flex; /* define o diesplay como flex para que seja possível utilizar as outras tags */
+  flex-wrap: nowrap; /* evita a "quebra de linha", fazendo com que todos os elementos filhos permaneçam na mesma linha */
+  overflow-x: scroll; /* define que um scroll seja criado caso os elementos sejam maiores que espaço horizontal disponível neste elemento */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel::-webkit-scrollbar-track {
+}
+
+.carousel::-webkit-scrollbar-thumb {
+}
+
+.card {
+  background-color: var(--blue);
+  color: var(--white);
+  min-width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.carouselBtn:checked + .card {
+  background-color: var(--purple);
+  color: var(--white);
+}

@@ -1,0 +1,36 @@
+#homeWrap .txtTitle {
+  justify-content: left;
+}
+.subTxtHome {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+.subTitleHome {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.categoryTitleTxt {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+.categorySubTxt {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+#tasksCompleted {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+}
+#tasksToDo {
+  width: 135px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}

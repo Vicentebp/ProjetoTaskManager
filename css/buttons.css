@@ -9,3 +9,26 @@
   left: 293px;
   top: 34px;
 }
+
+#detailBtn {
+  width: 80px;
+  height: 23px;
+  color: var(--purple);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 100px;
+  width: 100%;
+  box-sizing: content-box;
+}
+footer input[type="image"] {
+  padding: 0;
+}

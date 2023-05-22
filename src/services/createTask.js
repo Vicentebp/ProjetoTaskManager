@@ -6,7 +6,7 @@ const createTask = ({ name, date, startTime, finalTime, type, desc }) => {
   const startIso = date + "T" + startTime + ":00.000";
   const finalIso = date + "T" + finalTime + ":00.000";
 
-  const newTask = { name, startDate: startIso, finalDate: finalIso, type, desc, state: "toDo", userId };
+  const newTask = { name, startDate: startIso, finalDate: finalIso, type, desc, userId };
   arrTasks.push(newTask);
   localStorage.setItem("tasks", JSON.stringify(arrTasks));
 };
