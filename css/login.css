@@ -1,0 +1,52 @@
+#diaryScreen1 {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  left: 31px;
+  top: 87px;
+}
+#diaryScreen2 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 59px;
+  top: 191.26px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(-21.46deg);
+}
+#c1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 90px;
+  top: 156px;
+  background: #d1d0f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+#c2 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 78px;
+  top: 150px;
+  background: #e459ce;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 12.5px;
+}
+
+.subTxt a {
+  color: var(--purple);
+  font-style: normal;
+  text-decoration: none;
+}
+.titleTxt #screen1 {
+  line-height: 30px;
+  margin: 80px auto;
+}
+.titleTxt #screen2 {
+  line-height: 36px;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}

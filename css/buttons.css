@@ -1,0 +1,36 @@
+.homeBtn {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: auto auto;
+  background-color: var(--purple);
+  border-radius: 24px;
+  position: relative;
+  left: 293px;
+  top: 34px;
+}
+
+#detailBtn {
+  width: 80px;
+  height: 23px;
+  color: var(--purple);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 35px;
+  gap: 36px;
+  width: auto;
+  box-sizing: content-box;
+}
+footer input[type="image"] {
+  padding: 0;
+}

@@ -1,0 +1,91 @@
+.carousel {
+  width: calc(100% + 38px);
+  height: 53px;
+  margin-top: 21px;
+  gap: 10px;
+  display: flex; /* define o diesplay como flex para que seja possível utilizar as outras tags */
+  flex-wrap: nowrap; /* evita a "quebra de linha", fazendo com que todos os elementos filhos permaneçam na mesma linha */
+  overflow-x: scroll; /* define que um scroll seja criado caso os elementos sejam maiores que espaço horizontal disponível neste elemento */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+#taskList {
+  height: 360px;
+  gap: 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#taskList::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  background-color: var(--blue);
+  color: var(--white);
+  min-width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.carouselBtn:checked + .card {
+  background-color: var(--purple);
+  color: var(--white);
+}
+#statusWrapper {
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.statusCard {
+  height: 22px;
+  width: max-content;
+  padding: 0px 9px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  box-sizing: border-box;
+  color: var(--purple);
+}
+#toDo {
+  min-width: 80px;
+}
+#calendarWrapper {
+  gap: 25px;
+}
+
+.calendarBox {
+  flex-direction: column;
+  justify-content: left;
+  width: 286px;
+  height: 77px;
+  background: var(--blue);
+  padding: 12px 18px 18px 18px;
+  box-sizing: border-box;
+  color: var(--purple);
+  border-radius: 15px;
+  align-items: start;
+}
+.calendarBox .typeTxt {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.calendarBox .nameTxt {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
+.calendarBox .timeTxt {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+.statusBtn:checked + .statusCard {
+  background-color: var(--purple);
+  color: var(--white);
+}

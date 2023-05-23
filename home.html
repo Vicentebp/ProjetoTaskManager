@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/homeFonts.css" />
+    <link rel="stylesheet" href="css/progressBar.css" />
+
+    <script src="src/services/getUser.js"></script>
+
+    <script src="src/onReady.js"></script>
+    <script src="src/isUnlogged.js"></script>
+    <script src="src/getUserTasks.js"></script>
+    <script src="src/getTaskStates.js"></script>
+    <script src="src/taskNumber.js"></script>
+    <script src="src/footer.js"></script>
+    <script src="src/progressBar.js"></script>
+
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div class="bodyWrapper fontFamily" id="homeWrap">
+      <header class="subWrapper txtTitle" style="flex-direction: row; gap: 11px">
+        <img class="picture" />
+        <span id="userName">
+          <span class="subTxtHome">Hello, <br /></span>
+          <script src="src/getUserName.js"></script>
+        </span>
+      </header>
+      <main class="subWrapper">
+        <span class="subTxtHome subTitleHome">Let's check out your today's task</span>
+        <div class="defaultBox" id="percentBox">
+          <span id="tasksCompleted"></span>
+          <div id="barContainer">
+            <div id="progressBar"></div>
+          </div>
+          <span id="tasksToDo"></span>
+          <button class="defaultBox" id="detailBtn" onclick="document.location.href = 'calendar.html'">Details</button>
+          <img src="img/homeScreen/diaryWhite.png" id="diaryWhite" />
+        </div>
+
+        <span class="subTxtHome subTitleHome">Task categories</span>
+        <div class="subWrapper" id="categoryWrap">
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">College <br />stuff</h1>
+              <span class="categorySubTxt" id="collegeTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _university_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Study</h1>
+              <span class="categorySubTxt" id="studyTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _diary_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Social <br />life</h1>
+              <span class="categorySubTxt" id="socialTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _Chat_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Work</h1>
+              <span class="categorySubTxt" id="workTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _work alt bag_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Personal <br />Project</h1>
+              <span class="categorySubTxt" id="personalTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _folder file project_.svg" />
+          </div>
+          <div class="defaultBox categoryBox">
+            <div class="subWrapper" style="flex-wrap: wrap">
+              <h1 class="categoryTitleTxt">Home</h1>
+              <span class="categorySubTxt" id="homeTasks"></span>
+            </div>
+            <img src="img/screen3/🦆 icon _home outline_.svg" />
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M22.6666 10.3146V20.6666C22.6666 22.5076 21.1743 24 19.3333 24H15.3333C14.9651 24 14.6667 23.7015 14.6667 23.3333V15.3333C14.6667 14.9651 14.3682 14.6666 14 14.6666H10C9.63181 14.6666 9.33334 14.9651 9.33334 15.3333V23.3333C9.33334 23.7015 9.03486 24 8.66667 24H4.66668C2.82573 24 1.33335 22.5076 1.33335 20.6666V10.3146L1.09049 10.5146C0.806272 10.7487 0.386126 10.708 0.152065 10.4238C-0.0819954 10.1396 -0.0413362 9.71943 0.24288 9.48536L11.5762 0.152046C11.8224 -0.0506821 12.1776 -0.0506821 12.4238 0.152046L23.7571 9.48536C24.0413 9.71943 24.082 10.1396 23.8479 10.4238C23.6139 10.708 23.1937 10.7487 22.9095 10.5146L22.6666 10.3146ZM21.3423 9.22392L12 1.5303L2.65775 9.22392C2.66362 9.25951 2.66668 9.29606 2.66668 9.33332V20.6666C2.66668 21.7712 3.56211 22.6666 4.66668 22.6666H8.00001V15.3333C8.00001 14.2287 8.89544 13.3333 10 13.3333H14C15.1046 13.3333 16 14.2287 16 15.3333V22.6666H19.3333C20.4379 22.6666 21.3333 21.7712 21.3333 20.6666V9.33332C21.3333 9.29606 21.3364 9.25951 21.3423 9.22392Z"
+          fill="#6368D9"
+        />
+      </svg>
+      <input type="image" id="calendarSvg" src="img/🦆 icon _Calendar_.svg" onclick="document.location.href = 'calendar.html'" />
+      <input type="image" id="createTaskSvg" src="img/buttons/🦆 icon _plus circle_.svg" onclick="document.location.href = 'createTask.html'" />
+      <input type="image" id="bellSvg " src="img/buttons/🦆 icon _bell_.svg" onclick="document.location.href = 'notification.html'" />
+      <input type="image" id="profileSvg" src="img/buttons/🦆 icon _profile circle_.svg" onclick="document.location.href = 'profile.html'" />
+    </footer>
+  </body>
+</html>
