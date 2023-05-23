@@ -22,8 +22,11 @@ ready(() => {
   }
 
   //Event listener dos botões
+  document.getElementsByClassName("carouselBtn")[3].checked = "on";
+  document.getElementById("toDo").checked = "on";
   let taskDate = new Date();
   let taskStatus = "To do";
+  showTasks(taskDate, taskStatus);
   const carouselArray = document.getElementsByName("carousel");
   for (let i = 0; i < carouselArray.length; i++) {
     carouselArray[i].addEventListener("change", (e) => {

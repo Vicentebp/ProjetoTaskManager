@@ -12,23 +12,52 @@
     <link rel="stylesheet" href="css/buttons.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/calendar.css" />
+    <link rel="stylesheet" href="css/profile.css" />
 
     <script src="src/services/getUser.js"></script>
 
     <script src="src/getUserTasks.js"></script>
     <script src="src/getTaskStates.js"></script>
     <script src="src/onReady.js"></script>
+    <script src="src/getUserNameOcu.js"></script>
     <script src="src/isUnlogged.js"></script>
-    <script src="src/showTasks.js"></script>
-    <script src="src/calendar.js"></script>
 
     <title>Task Manager</title>
   </head>
   <body>
     <div class="bodyWrapper fontFamily" id="homeWrap">
       <header class="subWrapper txtTitle" style="flex-direction: row; gap: 11px">
-        <span class="subTxtHome" style="font-weight: 700; font-size: 14px; line-height: 21px" id="profileName"></span>
+        <div id="picuterePlaceholder"></div>
+        <div class="subWrapper" style="gap: 18px; justify-content: center">
+          <div class="subWrapper" style="flex-direction: column; text-align: left; align-items: left">
+            <span class="subTxtHome" id="profileName"></span>
+            <span class="subTxtHome" id="profileOcu"></span>
+          </div>
+          <button type="button" class="defaultBox" id="editProfile" onclick="">Edit Profile</button>
+        </div>
       </header>
+      <div class="defaultBox" id="percentBox">
+        <span id="amzTxt">Amazing!</span>
+        <span id="tasksCompletedProfile"></span>
+        <script>
+          const taskArray = getTaskStates();
+          const completedTaks = getTaskStates().filter((item) => item.state === "Completed");
+          document.getElementById("tasksCompletedProfile").innerText = `You have completed\n${completedTaks.length} tasks!`;
+        </script>
+        <button class="defaultBox" id="detailBtn" onclick="document.location.href = 'calendar.html'">Details</button>
+        <img src="img/homeScreen/diaryWhite.png" id="diaryWhite" />
+      </div>
+      <div class="subWrapper fontFamily" id="profileOps">
+        <button class="profileBtn"><img src="img/profileScreen/🦆 icon _User_.svg" /><span>Account information</span></button>
+        <button class="profileBtn"><img src="img/profileScreen/🦆 icon _settings account more_.svg" /><span>Settings</span></button>
+        <button
+          class="profileBtn"
+          onclick="localStorage.removeItem('auth')
+        document.location.href = 'index.html'"
+        >
+          <img src="img/profileScreen/🦆 icon _log out_.svg" /><span>Log out</span>
+        </button>
+      </div>
     </div>
 
     <footer>
